@@ -3,7 +3,7 @@
       <h2>{{title}}</h2>
       <p>{{greet('Dali')}}</p>
     
-    <peoples></peoples>
+    <peoples></peoples> <!-- Global component -->
     <people-local></people-local>
   </div>
 </template>
@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped> /*Css samo za ovaj comenent*/
   
 </style>
 
