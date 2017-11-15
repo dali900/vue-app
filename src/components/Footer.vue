@@ -24,7 +24,7 @@ export default {
   methods: {
     changeTitle: function () {
       //this.$emit('changeTitleEvent', 'VUE TUT');
-      bus.$emit('titleChanged','VUE TUT');
+      bus.$emit('titleChanged','VUE TUT'); //Saljemo Bus event, ucitava se u headr.vue
       console.log('RADI');
     }
 

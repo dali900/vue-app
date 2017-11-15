@@ -18,6 +18,7 @@ export default {
   },
   // Hook
   created(){
+    // Slusamo na bus event 
     bus.$on('titleChanged', (data) => {
       this.title = data;
     });
