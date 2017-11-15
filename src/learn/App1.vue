@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style scoped> /*Css samo za ovaj comenent*/
+<style scoped> /*Css samo za ovu komponentu*/
   
 </style>
 
