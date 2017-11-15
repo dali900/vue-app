@@ -7,9 +7,10 @@
 </template>
 
 <script>
+import {bus} from '../main';
 
 export default {
-  
+
   props: {
     title: {
       type: String
@@ -22,7 +23,8 @@ export default {
   },
   methods: {
     changeTitle: function () {
-      this.$emit('changeTitleEvent', 'VUE TUT');
+      //this.$emit('changeTitleEvent', 'VUE TUT');
+      bus.$emit('titleChanged','VUE TUT');
       console.log('RADI');
     }
 

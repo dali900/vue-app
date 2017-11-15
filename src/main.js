@@ -4,9 +4,8 @@ import MyAppTest from './learn/MyAppTest.vue'
 
 import MyApp from './MyApp.vue'
 
-
-
 Vue.component('peoples', MyAppTest); //Global component
+export const bus = new Vue(); // Bus Events
 
 new Vue({
   el: '#app',
