@@ -1,7 +1,7 @@
 <template>
 
-      <footer>
-        <p>{{copyright}}</p>
+      <footer v-on:click="changeTitle()">
+        <p > {{copyright}} </p> <!-- Ovde nece izvrsiti promenu changeTitleEvent nad title zato sto je referenca -->
       </footer>
 
 </template>
@@ -9,11 +9,23 @@
 <script>
 
 export default {
-
+  
+  props: {
+    title: {
+      type: String
+    }
+  },
   data () {
     return {
-      copyright: "Copyright 2017"
+      copyright: "Copyright 2017 "+ this.title
     }
+  },
+  methods: {
+    changeTitle: function () {
+      this.$emit('changeTitleEvent', 'VUE TUT');
+      console.log('RADI');
+    }
+
   }
 
 }

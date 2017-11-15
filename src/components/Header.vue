@@ -9,10 +9,10 @@
 <script>
 
 export default {
-
+  props: ["title"],
   data () {
     return {
-      title: "Vue Tutorial"
+      //title: "Vue Tutorial"
     }
   }
 

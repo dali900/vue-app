@@ -1,8 +1,8 @@
 <template>
   <div> 
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <app-main v-bind:persons="persons"></app-main><!--  Slanje podataka u Main.vue -->
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title" v-on:changeTitleEvent="udpateTitle($event)"></app-footer><!--  Testing emits -->
   </div>
 </template>
 
@@ -30,7 +30,13 @@ export default {
       {name: 'Mariano Marquardt', email: 'jean17@padberg.com', show: false}, 
       {name: 'Claudie Reinger', email: 'njacobson@gmail.com', show: false}, 
       {name: 'Prof. Tracey Carroll I', email: 'alycia.russel@hotmail.com', show: false}
-      ]
+      ],
+      title: "Vue app tut"
+    } 
+  },
+  methods: {
+    udpateTitle: function (param) {
+      this.title = param;
     }
   }
 
