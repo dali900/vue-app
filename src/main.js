@@ -7,7 +7,7 @@ import BlogApp from './BlogApp.vue'
 import VueResource from 'vue-resource'
 //------------------------------------------
 Vue.component('peoples', MyAppTest); //Global component
-export const bus = new Vue(); // Bus Events
+export const bus = new Vue(); // Bus Events (header.vue)
 
 new Vue({
   el: '#app',
