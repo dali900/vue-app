@@ -50,6 +50,7 @@ export default {
     },
     methods: {
         post: function(){
+            //VueResource plugin
             this.$http.post('http://jsonplaceholder.typicode.com/posts', {
                 title: this.blog.title,
                 body: this.blog.content,
