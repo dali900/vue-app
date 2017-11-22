@@ -16,6 +16,8 @@
             <select v-model="blog.author">
                 <option v-for="author in authors">{{ author }}</option>
             </select>
+            <hr>
+            <button v-on:click.prevent="post">Add Blog</button>
         </form>
         <div id="preview">
             <h3>Preview blog</h3>
@@ -42,10 +44,22 @@ export default {
                 cat: [],
                 author: ''
             },
-            authors: ['The Net Ninja', 'The Angular Avenger', 'The Vue Vindicator']
+            authors: ['The Net Ninja', 'The Angular Avenger', 'The Vue Vindicator'],
+            submitted: false
         }
     },
     methods: {
+        post: function(){
+            this.$http.post('http://jsonplaceholder.typicode.com/posts', {
+                title: this.blog.title,
+                body: this.blog.content,
+                cat: this.blog.cat,
+                userId: 1
+            }).then(function(data){
+                console.log(data);
+                this.submitted = true;
+            });
+        }
     }
 }
 </script>
