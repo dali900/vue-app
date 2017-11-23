@@ -1,7 +1,10 @@
 <template>
     <div>
-        <add-blog></add-blog>
-        <show-blogs></show-blogs>
+        <button v-on:click="changeView(component)">{{btnMsg}}
+        </button>
+        <component v-bind:is="component"></component>
+        <!-- <add-blog></add-blog>
+        <show-blogs></show-blogs> -->
     </div>
 </template>
 
@@ -16,9 +19,17 @@ export default {
     },
     data () {
         return {
+            btnMsg: "Show all blogs",
+            component: "add-blog"
         }
     },
     methods: {
+        changeView: function (arg) {
+            if(arg == 'add-blog'){
+                this.component = 'show-blogs';
+                this.btnMsg = "Add Blog";
+            } else {this.component = 'add-blog'; this.btnMsg = "Show all blogs"; }      
+        }
     }
 }
 </script>
