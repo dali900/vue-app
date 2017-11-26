@@ -8,7 +8,7 @@
      </li>
    </ul>
 
-   <a href="/blog.html">BLOG</a>
+   <a href="blog.html">BLOG</a>
 
     <keep-alive>
       <component v-bind:is="component"></component>
