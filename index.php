@@ -10,7 +10,7 @@
     	
     	
     </div>
+    <script src="dist/build.js"></script>
     <script src="dist/main2.js"></script>
-    
   </body>
 </html>
