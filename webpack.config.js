@@ -2,11 +2,15 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    build: './src/main.js',
+    main2: './src/main2.js',
+    main3: './src/main3.js'
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -46,7 +50,7 @@ module.exports = {
     extensions: ['*', '.js', '.vue', '.json']
   },
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: {index:'index2.html'},
     noInfo: true,
     overlay: true
   },

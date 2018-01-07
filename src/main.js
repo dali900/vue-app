@@ -13,7 +13,7 @@ Vue.use(VueResource);
 Vue.use(VueRouter);
 
 Vue.component('peoples', MyAppTest); //Global component
-export const bus = new Vue(); // Bus Events
+export const bus = new Vue(); // Bus Events (header.vue)
 
 const router = new VueRouter({
   routes: Routes
